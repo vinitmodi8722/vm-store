@@ -24,7 +24,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
   }));
 
   const session = await stripe.checkout.sessions.create({
-    payment_method_types: ["card"], // It should be "card", not "cart".
+    payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
     success_url: "http://localhost:5173/Success",
