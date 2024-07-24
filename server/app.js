@@ -22,13 +22,13 @@ app.post("/api/create-checkout-session", async (req, res) => {
     },
     quantity: product.quantity,
   }));
-
+console.log(process.env.NEXT_PUBLIC_SITE_URL,"okokkoko")
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: "http://localhost:5173/Success",
-    cancel_url: "http://localhost:5173/Cancel",
+    success_url: "https://vm-store-seven.vercel.app/Success",
+    cancel_url: "https://vm-store-seven.vercel.app/Cancel",
   });
 
   res.json({ id: session.id });
