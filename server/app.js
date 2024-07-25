@@ -22,7 +22,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
     },
     quantity: product.quantity,
   }));
-console.log(process.env.NEXT_PUBLIC_SITE_URL,"okokkoko")
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: lineItems,

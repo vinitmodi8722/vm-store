@@ -3,10 +3,8 @@ import backgroundImage from "../components/image/Bgimag.jpg";
 import logo from "../components/image/logo.png";
 import watchlogo from "../components/image/watchlogo.png"
 import { useNavigate } from "react-router-dom";
-import Darkmode from "./Darkmode";
 
 const Home = () => {
-
   const navigate = useNavigate();
 
   const girlsection = () =>{ 
