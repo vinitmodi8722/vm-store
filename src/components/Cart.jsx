@@ -43,7 +43,7 @@ const Cart = () => {
       "Content-Type": "application/json",
     };
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/api/create-checkout-session`,
+      "http://localhost:7000/api/create-checkout-session",
       {
         method: "POST",
         headers: headers,
